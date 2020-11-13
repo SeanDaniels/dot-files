@@ -6,8 +6,9 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "Sean Daniels"
-      user-mail-address "SeanWilliamDaniels@gmail.com")
+(setq user-full-name "Sean Daniels")
+(setq user-mail-address "sdaniel5@ncsu.edu")
+(setq +mu4e-backend 'offlineimap)
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -36,6 +37,7 @@
 (setq display-line-numbers-type t)
 
 (setq word-wrap t)
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -71,9 +73,25 @@
 (setq lsp-python-ms-executable
       "/home/swd/python-language-server/output/bin/Release/linux-x64/publish/Microsoft.Python.LanguageServer")
 
-(require 'use-package)
-(setq lsp-vhdl-server-path "~/.local/bin/hdl_checker") ; only needed if hdl_checker is not already on the PATH
-(custom-set-variables
-  '(lsp-vhdl-server 'hdl-checker))
-(use-package lsp-mode
-  :config (add-hook 'vhdl-mode-hook 'lsp))
+;; (require 'use-package)
+;; (setq lsp-vhdl-server-path "~/.local/bin/hdl_checker") ; only needed if hdl_checker is not already on the PATH
+;; (custom-set-variables
+;;   '(lsp-vhdl-server 'hdl-checker))
+;; (use-package lsp-mode
+;;   :config (add-hook 'vhdl-mode-hook 'lsp))
+
+(after! mu4e
+(set-email-account! "ncsu.edu"
+  '((mu4e-sent-folder       . "/Sent Mail")
+    (mu4e-drafts-folder     . "/Drafts")
+    (mu4e-trash-folder      . "/Trash")
+    (mu4e-refile-folder     . "/All Mail")
+    (smtpmail-smtp-user     . "sdaniel5@ncsu.edu")
+    (user-mail-address      . "sdaniel5@ncsu.edu")    ;; only needed for mu < 1.4
+    (mu4e-compose-signature . "---\nSean Daniels"))
+  t))
+;; (setq
+;;    message-send-mail-function   'smtpmail-send-it
+;;    smtpmail-default-smtp-server "smtp.gmail.com"
+;;    smtpmail-smtp-server         "smtp.gmail.com"
+;;    smtpmail-local-domain        "google.com")
