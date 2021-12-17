@@ -143,3 +143,6 @@ export LS_COLORS=$LS_COLORS:'ow=0;35:'
 
 # Globbing
 setopt extended_glob
+
+# editor
+export EDITOR=vim
