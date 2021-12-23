@@ -1,5 +1,7 @@
 #+TITLE: Doom Config
 #+startup: overview
+* Credit
+If you use Doom, you will recognize some of the text in this literate config. It is a direct copy from the provided $DOOMDIR/config.el. The work Henrik Lissner has done with Doom Emacs has actually changed the way I interact with the world around me. It made Emacs approachable for me.
 * Personal Username
 #+begin_src elisp
 (setq user-full-name "Sean Daniels"
