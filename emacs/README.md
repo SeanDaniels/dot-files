@@ -15,4 +15,4 @@ emacs.font: <font id>
 To get the *font id*, use 'fc-list | grep <font>'. 
 
 # Configuration
-I am trying a literate configuration. On my work machine, within the the $DOOMDIR, there is a symbolic link to the config.org file in this repository.
+I am trying a literate configuration. On my work machine, within the $DOOMDIR, there is a symbolic link to the config.org file in this repository.
