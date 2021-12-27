@@ -105,3 +105,10 @@ This is what I'm currently using on my work machine. I'm not sure if this is som
                       (mu4e-trash-folder . "/work/Deleted Items")))
 
 #+end_src
+* Journal Setup
+I'm currently using org journal to keep track of various work tasks. I like monthly files for this journal type.
+#+begin_src elisp
+(setq org-journal-file-type 'monthly
+      org-journal-file-format "%m-%Y.org"
+      org-journal-time-format " ")
+#+end_src
