@@ -9,9 +9,12 @@ I have multiple personal machines and a single work machine. I would like to uni
 - Zsh
 - Windows Terminal
 
-# TODO
+# TODOS
+A list of things I would like to do within my various configurations
+## Emacs
 - [ ] Work mail configuration
     - mbsync profile
     - directory structure for mail
 - [ ] Org agenda/journal configuration
     - directory structure
+- [ ] Switch to literate init structure
