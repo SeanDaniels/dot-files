@@ -133,16 +133,19 @@ export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/nu
 export LIBGL_ALWAYS_INDIRECT=1
 # Set browser
 export BROWSER=wslview
-# export emacs path
-export PATH="$HOME/.emacs.d/bin:$HOME/.local/bin:$HOME/work-scripts/bin:$PATH"
+# export DOOMDIR
+export DOOMDIR=$HOME/doom-config
+# Add doom binaries to path
+path+=$HOME/doom-emacs/bin
+# Add work scripts to path
+path+=$HOME/work-sripts/bin
+export PATH
+#export PATH="$HOME/.emacs.d/bin:$HOME/.local/bin:$HOME/work-scripts/bin:$PATH"
 # fix color of sub directories of symbolic links
 export LS_COLORS=$LS_COLORS:'ow=0;35:'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Globbing
-setopt extended_glob
 
 # editor
 export EDITOR=vim
