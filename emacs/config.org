@@ -43,7 +43,11 @@ Currently using 'doom-material' theme
 * Org Directory Setup
 If you use `org' and don't want your org files in the default location below, change `org-directory'. It must be set before org loads!
 #+begin_src elisp
-(setq org-directory "~/org/")
+(setq org-directory "~/org-files/")
+#+end_src
+* Org Customizations
+#+begin_src elisp
+(setq org-hide-emphasis-markers t)
 #+end_src
 * Line Number Setup
 This determines the style of line numbers in effect. If set to `nil', line numbers are disabled. For relative line numbers, set this to `relative'.
